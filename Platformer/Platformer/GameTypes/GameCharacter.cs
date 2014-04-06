@@ -13,7 +13,7 @@ namespace Platformer.GameTypes
     class GameCharacter
     {
         // GameCharacter variables
-        public Vector2 vector2;
+        public Vector2 location;
         public Texture2D texture { get; set; }
         public float rotation { get; set; }
         public float scale { get; set; }
@@ -24,13 +24,12 @@ namespace Platformer.GameTypes
         public static float Left, Right, Top, Bottom;
 
         public virtual void Load(ContentManager content, string texture_Path,
-            float rotation, float scale, float X, float Y)
+            float rotation, float scale, float posX, float posY)
         {
-            vector2 = new Vector2(X, Y);
+            location = new Vector2(posX, posY);
             texture = content.Load<Texture2D>(texture_Path);
             this.rotation = rotation;
             this.scale = scale;
-            float center = vector2.LengthSquared();
             origin.X = texture.Width / 2;
             origin.Y = texture.Height / 2;
         }
@@ -38,15 +37,15 @@ namespace Platformer.GameTypes
         public virtual void Update()
         {
             // Initialize precision detection variables
-            Left = this.vector2.X;
-            Right = this.vector2.X + this.texture.Width;
-            Top = this.vector2.Y;
-            Bottom = this.vector2.Y + this.texture.Height;
+            Left = this.location.X;
+            Right = this.location.X + this.texture.Width;
+            Top = this.location.Y;
+            Bottom = this.location.Y + this.texture.Height;
         }
 
         public virtual void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(texture, vector2, null, Color.White, rotation, origin, scale, SpriteEffects.None, 0f);
+            spriteBatch.Draw(texture, location, null, Color.White, rotation, origin, scale, SpriteEffects.None, 0f);
         }
     }
 }

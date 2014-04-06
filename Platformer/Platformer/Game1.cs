@@ -79,6 +79,8 @@ namespace Platformer
             // Call ScreenManager to manage the Updating of logic
             ScreenManager.Instance.Update(gameTime);
 
+            // Extend gameTime for use in other classes
+
             base.Update(gameTime);
         }
 

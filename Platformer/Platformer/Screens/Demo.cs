@@ -15,8 +15,12 @@ using Platformer.GameTypes;
 
 namespace Platformer.Screens
 {
+    /// <summary>
+    /// Used as a demonstration of the platformer engine
+    /// </summary>
     class Demo : GameScreen
     {
+        //Sprite initialization
         Background background = new Background();
         Player player = new Player();
 
@@ -24,6 +28,7 @@ namespace Platformer.Screens
         {
             base.LoadContent();
 
+            // Load sprite content
             background.LoadBackground(content, "Background");
             player.Load(content, "MiniTaur1R", 0, 2, 46, 62);
         }
