@@ -40,7 +40,7 @@ namespace Platformer.Screens
 
         public override void Update(GameTime gameTime)
         {
-            player.Update();
+            player.Update(gameTime);
             base.Update(gameTime);
         }
 

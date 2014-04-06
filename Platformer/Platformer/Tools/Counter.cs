@@ -9,7 +9,7 @@ namespace Platformer.Tools
 {
     public class Counter
     {
-        public int Counter { get; set; }
+        public int counter { get; set; }
         public int Limit { get; set; }
         public float Interval { get; set; }
         public float Elapsed { get; set; }
@@ -26,13 +26,13 @@ namespace Platformer.Tools
 
             if (Elapsed >= Interval) // Compares current amount of elapsed time to the set interval of time.
             {
-                Counter++;
+                counter++;
                 Elapsed -= Interval; // Reset the elapsed time
             }
 
-            if (Counter >= Limit)
+            if (counter >= Limit)
             {
-                Counter = 0; // Reset the counter
+                counter = 0; // Reset the counter
             }
         }
     }

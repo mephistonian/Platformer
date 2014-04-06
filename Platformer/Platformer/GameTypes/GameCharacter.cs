@@ -34,7 +34,7 @@ namespace Platformer.GameTypes
             origin.Y = texture.Height / 2;
         }
 
-        public virtual void Update()
+        public virtual void Update(GameTime gameTime)
         {
             // Initialize precision detection variables
             Left = this.location.X;
