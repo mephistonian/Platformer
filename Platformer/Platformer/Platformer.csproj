@@ -73,7 +73,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GameTypes\Background.cs" />
-    <Compile Include="GameTypes\GameCharacter.cs" />
+    <Compile Include="GameTypes\GameObject.cs" />
+    <Compile Include="GameTypes\IFocusable.cs" />
+    <Compile Include="GameTypes\Platform.cs" />
     <Compile Include="GameTypes\Player.cs" />
     <Compile Include="Management\GameScreen.cs" />
     <Compile Include="Management\ScreenManager.cs" />
@@ -81,7 +83,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Screens\Demo.cs" />
-    <Compile Include="Tools\Counter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

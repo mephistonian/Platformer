@@ -14,7 +14,8 @@ namespace Platformer.GameTypes
     /// Used to dynamically load and draw an instance of the background
     /// </summary>
     class Background
-    {// background variables (set public to support changing of size, shape, and texture)
+    {
+        // background variables (set public to support changing of size, shape, and texture)
         public Texture2D backgroundTexture;
         public Rectangle backgroundRectangle;
 

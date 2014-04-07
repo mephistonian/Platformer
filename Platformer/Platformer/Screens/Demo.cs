@@ -23,6 +23,7 @@ namespace Platformer.Screens
         //Sprite initialization
         Background background = new Background();
         Player player = new Player();
+        Platform floor = new Platform();
 
         public override void LoadContent()
         {
@@ -31,6 +32,7 @@ namespace Platformer.Screens
             // Load sprite content
             background.LoadBackground(content, "Background");
             player.Load(content, "MiniTaur1R", 0, 2, 46, 62);
+            floor.Load(content, "Floor", .1f, .5f, 100, 100);
         }
 
         public override void UnloadContent()
@@ -41,6 +43,7 @@ namespace Platformer.Screens
         public override void Update(GameTime gameTime)
         {
             player.Update(gameTime);
+            floor.Update(gameTime);
             base.Update(gameTime);
         }
 
@@ -48,6 +51,7 @@ namespace Platformer.Screens
         {
             background.DrawBackground(spriteBatch);
             player.Draw(spriteBatch);
+            floor.Draw(spriteBatch);
 
             base.Draw(spriteBatch);
         }
